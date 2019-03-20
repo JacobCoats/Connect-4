@@ -11,7 +11,6 @@ bool Logic::FindPiecePos(int** board, int col, int color) {
         if (row >= 0) {
             if (board[row][col - 1] == 0) {
                 board[row][col - 1] = color;
-                std::cout << "SUCCESS" << std::endl;
                 found = true;
             }
             else  {
@@ -19,14 +18,12 @@ bool Logic::FindPiecePos(int** board, int col, int color) {
             }
         }
         else {
-            std::cerr << "That column is full." << std::endl;
             found = true;
             success = false;
         }
     }
 
     globals::WINNER = DetectWins(board, color);
-    std::cout << "WINNER IS: " << globals::WINNER << std::endl;
 
     return success;
 }
