@@ -30,4 +30,4 @@
 *.exe
 *.out
 *.app
- obj/ bin/ *.depend *.layout *.cbp
+ obj/ bin/ *.depend *.layout *.cbp connect4.txt
