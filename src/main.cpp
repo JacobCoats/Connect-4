@@ -7,6 +7,7 @@
 
 using std::cout;
 using std::cerr;
+using std::cin;
 using std::endl;
 
 int main (int argc, char **argv) {
@@ -38,7 +39,6 @@ int main (int argc, char **argv) {
 
                 if (globals::WINNER) {
                     running = false;
-                    cout << "WINNER DETECTED" << endl;
                 }
                 if (turnCompleted) {
                     turn = 2;
@@ -74,6 +74,8 @@ int main (int argc, char **argv) {
         else {
             cout << "It's a draw." << endl;
         }
+
+        cin.get();
 
         graphics.Clean();
     }
